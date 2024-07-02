@@ -1,0 +1,5 @@
+Installing:
+npm package
+npm install cypress --save-dev
+Documentation:
+https://docs.cypress.io/guides/overview/why-cypress
