@@ -11,20 +11,25 @@ options{
 }
   stages {
     stage('Building') {
+        steps{
+             echo "Building the application"
+
+        }
       
-       echo "Building the application"
-      }
-stage('Testing') {
+         }
+    stage('Testing') {
     
       steps {
         bat 'npm i'
-        bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}
+        bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
       }
     }
-      stage('Deploying') {
-      
+    
+    stage('Deploying') {
+      steps{
        echo "Deploying the application"
       }
+  }
   }
   post{
   always
