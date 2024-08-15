@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "cypress:open": "cypress open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+ "scripts": {
+    "test": "test",
+    "cypress:open": "cypress open --browser chrome --e2e",
+    "cypress:runDefault": "cypress run --spec cypress/e2e/tests/*.cy.js",
+    "cypress:chrome": "cypress run --browser chrome --spec cypress/e2e/tests/*.cy.js",
+    "cypress:edge": "cypress run --browser edge --spec cypress/e2e/tests/*.cy.js",
+    "cypress:runChromeHeadless": "cypress run --headless --browser chrome --spec cypress/e2e/tests/*.cy.js --record --key 4bc50df7-5eee-4147-8eb3-ccea611c8d4b"
   },
+
   "author": "Ayse",
   "license": "ISC",
   "devDependencies": {
